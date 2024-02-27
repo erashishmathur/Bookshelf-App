@@ -1,0 +1,45 @@
+// //DB connect
+// dbConnect();
+
+//connect DB
+// mongoose
+//   .connect(
+//     "mongodb+srv://ashishmathur154:aNzSt8llKqSYdEgQ@cluster0.p2esjjt.mongodb.net/Bookshelf-app",
+//     {
+//       useNewUrlParser: true,
+//     }
+//   )
+//   .then(() => console.log("Db Connected"))
+//   .catch((err) => console.log(err));
+
+async (req, res) => {
+  try {
+    const { name, email, password } = req.body;
+    const user = await User.create({ name, email, password });
+    console.log(user);
+
+    res.send(user);
+  } catch (error) {
+    res.send(error);
+  }
+}
+
+"dev": "concurrently\"npm run server\"\"npm run client\""
+
+dispatch({
+      type: CREATE_BOOK_REQUEST,
+    });
+    const config = {
+      "Content-Type": "application/json",
+    };
+const {data} = await axios.post('/api/books', bookData, config);
+
+  dispatch({
+    type: CREATE_BOOK_SUCCESS,
+    payload: data,
+  });
+
+  dispatch({
+    type: CREATE_BOOK_FAIL,
+    payload: data,
+  });
