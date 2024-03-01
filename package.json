@@ -1,5 +1,5 @@
 {
-  "name": "javascript-course",
+  "name": "Bookshelf App",
   "version": "1.0.0",
   "description": "Bookshelf",
   "main": "server.js",
