@@ -32,6 +32,4 @@ app.listen(PORT, () => {
   console.log(`Server is up and running ${PORT}`);
 });
 
-// ashish
-// 9IltKAG37dKhp4XQ
-//aNzSt8llKqSYdEgQ
+
