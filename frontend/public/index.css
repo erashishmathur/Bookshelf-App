@@ -1,1 +1,46 @@
+/* footer */
+#imp-link {
+  background-color: #576574;
+  color: white;
+  overflow: auto;
+}
+
+.div33 {
+  width: 33.33%;
+  float: left;
+  padding: 25px 50px;
+  box-sizing: border-box;
+}
+
+.div33 h3 {
+  text-decoration: underline;
+  text-underline-offset: 10px;
+  text-decoration-thickness: 2px;
+
+}
+
+#footer-menu {
+  list-style-type: none;
+  padding: 0px;
+}
+
+#footer-menu li {
+  padding-bottom: 10px;
+}
+
+#footer-menu li a {
+  text-decoration: none;
+  color: white;
+}
+
+#footer-menu-container {
+  padding-left: 100px;
+}
+
+#copyright {
+  background-color: #222f3e;
+  text-align: center;
+  color: #cbcbcb;
+  padding: 10px;
+}
 
