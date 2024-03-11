@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { registerUserAction } from "../../redux/actions/users/usersActions";
+import { useNavigate } from "react-router-dom";
 
 const RegisterUser = ({ history }) => {
   const [name, setName] = useState("");
@@ -8,7 +9,9 @@ const RegisterUser = ({ history }) => {
   const [password, setpassword] = useState("");
 
   const dispatch = useDispatch();
-
+  
+  const navigate = useNavigate();
+  
   //Grab user login from store
   const userLogin = useSelector((state) => state.userLogin);
 
@@ -17,7 +20,7 @@ const RegisterUser = ({ history }) => {
 
   useEffect(() => {
     if (userInfo) {
-      window.history.pushState([], "/dashboard");
+      navigate("/profile");
     }
   });
 
