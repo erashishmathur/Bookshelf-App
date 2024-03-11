@@ -13,14 +13,7 @@ function App() {
     <div className="App">
       <Router>
         <Navbar />
-        <Routes
-          value={{
-            push: (to) => window.history.pushState({}, "", to),
-            replace: (to) => window.history.replaceState({}, "", to),
-            goBack: () => window.history.back(),
-            // ... other history methods
-          }}
-        >
+        <Routes>
           <Route exact path="/login" Component={LoginUser}></Route>
           <Route exact path="/profile" Component={Profile}></Route>
           <Route exact path="/user-update" Component={UpdateProfile}></Route>
