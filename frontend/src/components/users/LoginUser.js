@@ -2,14 +2,16 @@ import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { loginUserAction } from "../../redux/actions/users/usersActions";
 import ErrorMessage from "../ErrorMessage";
+import { useNavigate } from "react-router-dom";
 
-const LoginUser = ({ history }) => {
+const LoginUser = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
   const dispatch = useDispatch();
   //Grab pieces of data from our store that we care about
-
+  const navigate = useNavigate();
+  
   const state = useSelector((state) => {
     return state.userLogin;
   });
@@ -25,8 +27,8 @@ const LoginUser = ({ history }) => {
   //Redirect;
 
   useEffect(() => {
-    if (userInfo) window.history.pushState([userInfo], "/profile");
-  }, [userInfo]);
+    if (userInfo)navigate("/profile");
+  });
 
   return (
     <div className="row container-height">
