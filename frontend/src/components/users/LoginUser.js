@@ -27,7 +27,7 @@ const LoginUser = () => {
   //Redirect;
 
   useEffect(() => {
-    if (userInfo)navigate("/profile");
+    if (userInfo) navigate("/profile");
   });
 
   return (
