@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { registerUserAction } from "../../redux/actions/users/usersActions";
 import { useNavigate } from "react-router-dom";
 
-const RegisterUser = ({ history }) => {
+const RegisterUser = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setpassword] = useState("");
