@@ -19,9 +19,8 @@ const RegisterUser = ({ history }) => {
   //Redirect if user is login/authenticated
 
   useEffect(() => {
-    if (userInfo) {
+    if (userInfo) 
       navigate("/profile");
-    }
   });
 
   const formSubmitHandler = (e) => {
